@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Paint3DManager : MonoBehaviour
@@ -63,14 +64,10 @@ public class Paint3DManager : MonoBehaviour
     private bool GetWallPosFromWorldPos(ref Vector3 uvWorldPosition)
     {
         //TODO: change input mouse pos to touch pos
-#if UNITY_EDITOR || UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN || UNITY_EDITOR_LINUX || UNITY_WEBGL
+        
         Ray cursorRay = sceneCamera.ScreenPointToRay(Input.mousePosition);
-#else
-    Ray cursorRay = sceneCamera.ScreenPointToRay(Input.mousePosition);
-#endif
 
-
-        if (!Physics.Raycast(cursorRay, out var hit, 200f))
+        if (!Physics.Raycast(cursorRay, out var hit, 10000f))
             return false;
 
         if (hit.collider == null || !hit.collider.gameObject.CompareTag("FinishWall"))
@@ -80,13 +77,14 @@ public class Paint3DManager : MonoBehaviour
         if (meshCollider == null || meshCollider.sharedMesh == null)
             return false;
 
+        
         Vector2 pixelUV = hit.textureCoord;
 
         var orthographicSize = canvasCam.orthographicSize;
         uvWorldPosition.x = pixelUV.x - orthographicSize; //To center the UV on X
         uvWorldPosition.y = pixelUV.y - orthographicSize; //To center the UV on Y
         uvWorldPosition.z = 0.0f;
-
+       
         return true;
     }
 }

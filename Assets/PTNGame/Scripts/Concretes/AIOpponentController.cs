@@ -14,7 +14,7 @@ public class AIOpponentController : Character
         Init();
 
         agent = GetComponent<NavMeshAgent>();
-        ObstacleForce = 3000f;
+        ObstacleForce = 3800f;
     }
 
 

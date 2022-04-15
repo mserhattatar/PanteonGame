@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecf8afa239ff3994c91cb39bc97ba972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joystickObj: {fileID: 0}
   rankingBoard: {fileID: 0}
   allCharacters:
   - {fileID: 0}

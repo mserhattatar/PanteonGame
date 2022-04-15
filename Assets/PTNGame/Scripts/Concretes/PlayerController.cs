@@ -6,7 +6,7 @@ public class PlayerController : Character
     [SerializeField] private Joystick joystick;
 
     private const float Speed = 5;
-    private const float RotationSpeed = 120;
+    private const float RotationSpeed = 80;
 
     private void Awake() => Init();
 
@@ -21,6 +21,8 @@ public class PlayerController : Character
 
     protected override float SetRunAniSpeed()
     {
+        if (!CanMove)
+            return 0;
         return joystick.Vertical != 0 ? Math.Abs(joystick.Vertical) : Math.Abs(joystick.Horizontal);
     }
 

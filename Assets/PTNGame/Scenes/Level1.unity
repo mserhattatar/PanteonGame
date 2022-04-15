@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.90479213, g: 0.8797204, b: 1.0942056, a: 1}
+  m_IndirectSpecularColor: {r: 0.90460515, g: 0.8804127, b: 1.092064, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1692,7 +1692,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8660180550261597817, guid: ac602a1e37bad924c886ac718c80a762, type: 3}
   m_PrefabInstance: {fileID: 670213659669743588}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 670213659669743589}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a47f546fc70ec8428172694e78e4288, type: 3}
@@ -1962,15 +1962,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 425337435730566464, guid: 34a5141afc1eadc4290bdb87937ede4a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.20988709
+      value: 0.2098871
       objectReference: {fileID: 0}
     - target: {fileID: 425337435730566464, guid: 34a5141afc1eadc4290bdb87937ede4a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.010841377
+      value: 0.010841412
       objectReference: {fileID: 0}
     - target: {fileID: 425337435730566464, guid: 34a5141afc1eadc4290bdb87937ede4a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0023274538
+      value: -0.0023274613
       objectReference: {fileID: 0}
     - target: {fileID: 425337435730566467, guid: 34a5141afc1eadc4290bdb87937ede4a, type: 3}
       propertyPath: m_LookAt
@@ -1993,6 +1993,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 670213659430032580, guid: ac602a1e37bad924c886ac718c80a762, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 670213659430032581, guid: ac602a1e37bad924c886ac718c80a762, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2081,12 +2085,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 670213659520509796, guid: ac602a1e37bad924c886ac718c80a762, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 670213659520509797, guid: ac602a1e37bad924c886ac718c80a762, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 18.800049
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac602a1e37bad924c886ac718c80a762, type: 3}
+--- !u!1 &670213659669743589 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8660180550261597821, guid: ac602a1e37bad924c886ac718c80a762, type: 3}
+  m_PrefabInstance: {fileID: 670213659669743588}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &802040512403742501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2435,6 +2448,10 @@ PrefabInstance:
       propertyPath: thirdPersonCamera
       value: 
       objectReference: {fileID: 510017904}
+    - target: {fileID: 2505017765727881715, guid: 704b8e2f3a081864c889490d53d5360c, type: 3}
+      propertyPath: joystickObj
+      value: 
+      objectReference: {fileID: 670213659669743589}
     - target: {fileID: 2505017765727881715, guid: 704b8e2f3a081864c889490d53d5360c, type: 3}
       propertyPath: rankingBoard
       value: 

@@ -13,7 +13,7 @@ public class Character : MonoBehaviour
 
     protected bool IsFalling;
     protected bool CanMove;
-    protected float ObstacleForce = 2000f;
+    protected float ObstacleForce = 3500f;
     private float RunAniSpeed => SetRunAniSpeed();
 
     protected virtual float SetRunAniSpeed() => 0f;
@@ -123,7 +123,7 @@ public class Character : MonoBehaviour
 
             CanMove = false;
             characterAnimations.SetFallingDown(true);
-            rb.AddExplosionForce(ObstacleForce, collision.transform.position, 360, 0.2f);
+            rb.AddExplosionForce(ObstacleForce, collision.transform.position, 360, 0.1f);
         }
 
         if (CanMove && collision.gameObject.CompareTag("SpawnObstacle"))

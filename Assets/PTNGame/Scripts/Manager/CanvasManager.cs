@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CanvasManager : MonoBehaviour
 {
+    [SerializeField] private GameObject joystickObj;
     [SerializeField] private GameObject rankingBoard;
     [SerializeField] private Transform[] allCharacters;
     [SerializeField] private TextMeshProUGUI[] rankingTexts;
@@ -50,5 +51,6 @@ public class CanvasManager : MonoBehaviour
     private void SetRankingBoard()
     {
         rankingBoard.SetActive(!rankingBoard.activeInHierarchy);
+        joystickObj.SetActive(!joystickObj.activeInHierarchy);
     }
 }
